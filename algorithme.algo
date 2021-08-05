@@ -1,0 +1,34 @@
+ALGORITHM compte_ph
+VAR
+    i , mots, voyelles , caracteres : INTEGER := 0;
+    ph : STRING;
+BEGIN
+    ph := "some text."
+    WHILE ( ph[i] <> "." ) DO
+
+            IF (ph[i] = "a" or ph[i] = "A" or
+                ph[i] = "e" or ph[i] = "E" or
+                ph[i] = "i" or ph[i] = "I" or
+                ph[i] = "o" or ph[i] = "O" or
+                ph[i] = "u" or ph[i] = "U" or
+                ph[i] = "y" or ph[i] = "Y" or
+            ) THEN
+                voyelles := voyelles + 1;
+            END_IF
+
+            IF (ph[i] = " ") THEN
+                mots := mots + 1;
+            END_IF
+
+            IF (ph[i] <> " ") THEN
+               caracteres := caracteres + 1 
+            END_IF
+
+        i := i+1;
+
+    END_WHILE
+    mots := mots+ 1;
+    Write(mots);
+    Write(voyelles);
+    Write(caracteres); 
+END
